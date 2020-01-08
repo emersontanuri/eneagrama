@@ -77,7 +77,7 @@ const validation = () => {
         if(countMarkedAdd >= 135){
             getAnswers()
 
-            window.location.href = "/dist/test/resultado.html";
+            window.location.href = "/test/resultado.html";
 
         } else {
             buttonNext.parentElement.nextElementSibling.classList.remove('hidden');

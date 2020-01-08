@@ -89,7 +89,7 @@ const changeUI = (typeAnswers,typeInfos) => {
     textFour.innerText = typeInfos.dificuldade_si
     textFive.innerText = typeInfos.dificuldade_outros
     
-    imgEnea.setAttribute('src', `../../img/${typeInfos.img}`)
+    imgEnea.setAttribute('src', `/img/${typeInfos.img}`)
     
     textSix.innerText = typeInfos.bencao
     textSeven.innerText = typeInfos.estrategia

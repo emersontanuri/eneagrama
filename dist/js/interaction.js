@@ -20,7 +20,7 @@ const cleanLocalStorage = () => {
 
         localStorage.clear()
 
-        window.location.href = "/dist/dicas.html";
+        window.location.href = "/dicas.html";
     })
 };
 
