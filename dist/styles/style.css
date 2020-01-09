@@ -11403,6 +11403,18 @@ video {
 
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
+@import '../../node_modules/@fortawesome/fontawesome-free/css/brands.css';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/css/regular.css';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/css/solids.css';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/css/svg-with-js.css';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/css/v4-shims.css';
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
