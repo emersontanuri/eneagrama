@@ -1,10 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    form: './src/js/form.js',
+    interaction: './src/js/interaction.js',
+    result: './src/js/result.js'
+},
   output: {
     path: path.resolve(__dirname, 'dist/js'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
