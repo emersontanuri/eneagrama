@@ -1,18 +1,35 @@
 {
-  "name": "Eneagrama",
+  "name": "eneagrama",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwind build src/styles/style.css -o dist/styles/style.css"
+    "build:css": "tailwind build src/styles/style.css -o dist/styles/style.css",
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
   },
   "keywords": [],
-  "author": "",
+  "author": "emersontanuri",
   "license": "ISC",
   "dependencies": {
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.1.4",
+    "webpack-dev-server": "^3.10.1"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0"
-  }
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emersontanuri/eneagrama.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emersontanuri/eneagrama/issues"
+  },
+  "homepage": "https://github.com/emersontanuri/eneagrama#readme",
+  "description": ""
 }
