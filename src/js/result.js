@@ -40,14 +40,14 @@
 // Vê qual é a asa da pessoa
 
 const wingLeftValidate = () => {
-    if(typeAnswers.indexOf(personType) === -1){
+    if(typeAnswers.indexOf(personType) === 0){
         return 8
     } else {
         return typeAnswers.indexOf(personType) - 1 }
     }
 
 const wingRightValidate = () => {
-    if(typeAnswers.indexOf(personType) === 9){
+    if(typeAnswers.indexOf(personType) === 8){
         return 0
     } else {
         return typeAnswers.indexOf(personType) + 1 }
