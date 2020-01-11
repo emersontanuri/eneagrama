@@ -22,6 +22,7 @@ const placeQuestions = (data) => {
 };
 
 
+
 const arrSum = arr => arr.reduce((a, b) => a + parseInt(b), 0)
 
 // Pega o valor e joga pro localStorage
@@ -54,9 +55,12 @@ const getAnswers = () => {
     }
 
 
+
 // Validação
 
 let countMarked = 0;
+
+
 
 const validation = () => {
     const buttonNext = document.querySelector('#next')
@@ -80,13 +84,39 @@ const validation = () => {
             window.location.href = "/test/resultado.html";
 
         } else {
+            
+
+            const sinaliza = () => {
+                const perguntas = Array.from(document.querySelectorAll('.question'))
+                console.log(perguntas)
+                perguntas.forEach(question => {
+                    if(question.getAttribute('value')){
+                        
+                    } else {
+                        question.querySelectorAll('label').forEach(question => {
+                            question.classList.remove('text-blue-700')
+                            question.classList.add('text-red-700')
+                        })
+                    }
+                })
+            }
+
+            sinaliza()
+            
             buttonNext.parentElement.nextElementSibling.classList.remove('hidden');
+
             setTimeout(() => {
                 buttonNext.parentElement.nextElementSibling.classList.add('hidden');
             }, 3000);
+
+
         }
     })
 };
+
+// Mostrar visualmente quais não foram marcadas
+
+
 
 // Muda a página das perguntas
 
@@ -111,9 +141,11 @@ const showAnswer = () => {
         alternative.addEventListener('click', e => {
             e.preventDefault();
             alternative.parentElement.querySelectorAll('p').forEach(alternative => {
-                alternative.classList.remove('bg-blue-700','shadow-sm')
+                alternative.classList.remove('bg-blue-600','shadow-sm')
             })
-            alternative.classList.add('bg-blue-700','shadow-sm')
+
+            alternative.classList.add('bg-blue-600','shadow-sm')
+            alternative.parentElement.parentElement.setAttribute('value', `${alternative.innerText}`)
         })
     })
 }
@@ -148,10 +180,10 @@ getQuestions((err, data) => {
         
         // changeQuestions(firstQuestion, lastQuestion)
         showAnswer();
-        validation()
     };
 });
 
 
 
 
+validation()

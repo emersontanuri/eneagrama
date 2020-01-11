@@ -19,14 +19,45 @@
 </head>
 <body class="bg-gray-100">
     <!-- Inicio do Header -->
-    <header>
-        <nav class="bg-blue-700">
-            <div class="container lg:px-40 py-3 flex">
-                <a href="../../index.html" class="inline"><img src="../../img/favicon.png" alt="Teste do Eneagrama"></a>
-                <a href="../../index.html" class="inline"><h3 class="mx-3 text-lg font-semibold text-white inline">Teste do Eneagrama</h3></a>
+    <header class=" bg-blue-700">
+        <nav class="container flex items-center justify-between px-4 py-3">
+            <div class="inline w-full flex lg:w-2/6">
+                <a href="../index.html" class="inline"><img src="../img/favicon.png" alt="Teste do Eneagrama"></a>
+                <a href="../index.html" class="inline"><h3 class="mx-3 text-lg font-semibold text-white">Teste do Eneagrama</h3></a>
             </div>
-        </nav>
+            <div id="nav-btn">
+                <a class="block text-blue-300 hover:text-white focus:text-white focus:outline-none">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                    </svg>
+                </a>
+            </div id="nav-btn">
+        </nav class="flex items-center justify-between px-4 py-3 bg-blue-700">
     </header>
+
+    <div id="navbar" class="flex justify-end hidden">
+        <div class=" mt-5 w-full md:w-3/6 lg:w-2/6 absolute">
+            <div class="relative px-4 -mt-16">
+                <div class="bg-white py-6 px-8 rounded-lg shadow-lg">
+                    <div class="flex justify-end">
+                        <a id="close-nav" class="text-lg text-red-700"><i class="fas fa-window-close"></i></a>
+                    </div>
+
+                    <ul class="mt-1 rounded">
+                        <a href="../tipo.html?&tipo=1"><li class="font-semibold text-lg leading-loose bg-gray-100 hover:bg-gray-300 px-2">Tipo 01</li></a>
+                        <a href="../tipo.html?&tipo=2"><li class="font-semibold text-lg leading-loose bg-gray-200 hover:bg-gray-300 px-2">Tipo 02</li></a>
+                        <a href="../tipo.html?&tipo=3"><li class="font-semibold text-lg leading-loose bg-gray-100 hover:bg-gray-300 px-2">Tipo 03</li></a>
+                        <a href="../tipo.html?&tipo=4"><li class="font-semibold text-lg leading-loose bg-gray-200 hover:bg-gray-300 px-2">Tipo 04</li></a>
+                        <a href="../tipo.html?&tipo=5"><li class="font-semibold text-lg leading-loose bg-gray-100 hover:bg-gray-300 px-2">Tipo 05</li></a>
+                        <a href="../tipo.html?&tipo=6"><li class="font-semibold text-lg leading-loose bg-gray-200 hover:bg-gray-300 px-2">Tipo 06</li></a>
+                        <a href="../tipo.html?&tipo=7"><li class="font-semibold text-lg leading-loose bg-gray-100 hover:bg-gray-300 px-2">Tipo 07</li></a>
+                        <a href="../tipo.html?&tipo=8"><li class="font-semibold text-lg leading-loose bg-gray-200 hover:bg-gray-300 px-2">Tipo 08</li></a>
+                        <a href="../tipo.html?&tipo=9"><li class="font-semibold text-lg leading-loose bg-gray-100 hover:bg-gray-300 px-2">Tipo 09</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Inicio do Header -->
 
     <!-- Inicio da área principal -->
@@ -80,6 +111,7 @@
     <!-- Fim do footer -->
 
     <script src="../js/form.js"></script>
+    <script src="../js/interaction.js"></script>
 
 </body>
 </html>

@@ -4,7 +4,8 @@ module.exports = {
   entry: {
     form: './src/js/form.js',
     interaction: './src/js/interaction.js',
-    result: './src/js/result.js'
+    result: './src/js/result.js',
+    types: './src/js/types.js'
 },
   output: {
     path: path.resolve(__dirname, 'dist/js'),
