@@ -72,7 +72,7 @@ const validation = () => {
         countMarkedAdd = countMarked
 
         alternatives.forEach(alternative => {
-            if(alternative.classList.contains('bg-blue-700')){
+            if(alternative.classList.contains('bg-blue-600')){
                 ++countMarkedAdd
                 alternative.parentElement.parentElement.setAttribute('value', alternative.innerText)
             }
@@ -85,10 +85,8 @@ const validation = () => {
 
         } else {
             
-
             const sinaliza = () => {
                 const perguntas = Array.from(document.querySelectorAll('.question'))
-                console.log(perguntas)
                 perguntas.forEach(question => {
                     if(question.getAttribute('value')){
                         
@@ -108,7 +106,6 @@ const validation = () => {
             setTimeout(() => {
                 buttonNext.parentElement.nextElementSibling.classList.add('hidden');
             }, 3000);
-
 
         }
     })
