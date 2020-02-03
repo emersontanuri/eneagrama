@@ -232,7 +232,7 @@ const validation = () => {
         } else {
             const sinaliza = () => {
                 const perguntas = Array.from(
-                    document.querySelectorAll("#question")
+                    document.querySelectorAll(".question")
                 );
                 perguntas.forEach(question => {
                     if (question.getAttribute("value")) {
