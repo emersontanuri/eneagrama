@@ -208,16 +208,13 @@ let countMarked = 0;
 
 const validation = () => {
     const buttonNext = document.querySelector("#next");
-    const alternatives = document.querySelectorAll("p");
 
     buttonNext.addEventListener("click", e => {
         e.preventDefault();
-
-        countMarkedAdd = countMarked;
-
+        const alternatives = document.querySelectorAll("p");
         alternatives.forEach(alternative => {
             if (alternative.classList.contains("bg-blue-600")) {
-                ++countMarkedAdd;
+                countMarked += 1;
                 alternative.parentElement.parentElement.setAttribute(
                     "value",
                     alternative.innerText
@@ -225,7 +222,7 @@ const validation = () => {
             }
         });
 
-        if (countMarkedAdd >= 135) {
+        if (countMarked >= 135) {
             getAnswers();
 
             window.location.href = "/test/resultado.html";
@@ -250,7 +247,6 @@ const validation = () => {
             buttonNext.parentElement.nextElementSibling.classList.remove(
                 "hidden"
             );
-
             setTimeout(() => {
                 buttonNext.parentElement.nextElementSibling.classList.add(
                     "hidden"
