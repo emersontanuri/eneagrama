@@ -200,6 +200,8 @@ const getAnswers = answersData => {
     localStorage.setItem("typeAnswers", JSON.stringify(typeAnswers));
 };
 
+// Sinaliza quando há alternativas sem marcar
+
 const sinaliza = (perguntas, buttonNext) => {
     perguntas.forEach(question => {
         if (question.getAttribute("value")) {
@@ -216,6 +218,8 @@ const sinaliza = (perguntas, buttonNext) => {
     }, 3000);
 };
 
+// Validação das alternativas para saber se todas foram marcadas
+
 const validation = alternatives => {
     let countMarked = 0;
     alternatives.forEach(alternative => {
@@ -230,7 +234,7 @@ const validation = alternatives => {
     return countMarked;
 };
 
-// Sinaliza a resposta
+// Mostra a alternativa que foi marcada
 
 const showAnswer = alternatives => {
     alternatives.forEach(alternative => {
@@ -267,7 +271,7 @@ const getQuestions = callback => {
     request.send();
 };
 
-// types
+// types e resultados
 
 // Pega os dados do JSON
 
@@ -287,7 +291,7 @@ const getData = resource => {
     });
 };
 
-// Asa da Pessoa
+// Encontra a Asa da pessoa conferindo o anterior e o posterior do Index do tipo definido
 
 const findWing = (typeAnswers, personType) => {
     const wingLeftValidate = () => {
@@ -316,7 +320,7 @@ const findWing = (typeAnswers, personType) => {
     return personWing;
 };
 
-// Altera os dados dos elementos
+// Altera os dados dos elementos no DOM da página Tipos e Resultados
 
 const changeGeneralUI = (
     typeInfos,
@@ -364,6 +368,8 @@ const changeGeneralUI = (
     textEight.innerText = typeInfos.desenvolver;
     textNine.innerText = typeInfos.ajuda;
 };
+
+// Altera os dados dos elementos no DOM apenas da página Resultados
 
 const changeTypeUI = (typeAnswers, personType, wing) => {
     wing.innerText = typeAnswers.indexOf(findWing(typeAnswers, personType)) + 1;

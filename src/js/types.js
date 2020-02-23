@@ -27,7 +27,7 @@ const textSeven = document.querySelector("#text-7");
 const textEight = document.querySelector("#text-8");
 const textNine = document.querySelector("#text-9");
 
-// pega os parâmetros da URL
+// Pega os parâmetros da URL
 
 const getUrlVars = () => {
     let vars = {};
@@ -40,19 +40,19 @@ const getUrlVars = () => {
 
     return vars;
 };
-// Vê qual é o tipo da pessoa
+// Vê qual é o tipo escolhido
 
 const personType = getUrlVars().tipo;
 
-let typeInfos = 0;
-
 // Pega os dados do JSON
+
+let typeInfos = 0;
 
 getData("js/Typesdata.json")
     .then(data => {
         typeInfos = data[personType - 1];
 
-        // Altera os dados dos elementos
+        // Chama a função que altera os dados do DOM
         changeGeneralUI(
             typeInfos,
             nameOne,

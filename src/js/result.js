@@ -38,17 +38,16 @@ const typeAnswers = JSON.parse(localStorage.getItem("typeAnswers"));
 
 const personType = Math.max(...typeAnswers);
 
-let typeInfos = 0;
-
-// Altera os dados dos elementos
-
-let typeResult = 0;
-
 // Pega os dados do JSON
+
+let typeInfos = 0;
+let typeResult = 0;
 
 getData("/js/Typesdata.json")
     .then(data => {
         typeInfos = data[typeAnswers.indexOf(personType)];
+
+        // Chama as funções que alteram os dados no DOM
         changeGeneralUI(
             typeInfos,
             nameOne,
