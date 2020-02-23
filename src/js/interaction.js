@@ -30,7 +30,7 @@ const cleanLocalStorage = () => {
     }
 };
 
-const showNav = () => {
+showNav = () => {
     if (navbarButton === null) {
         return false;
     } else {
