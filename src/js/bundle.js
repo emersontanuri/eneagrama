@@ -1,3 +1,35 @@
+// Interactions
+
+// Funcionalidade de menu no Navbar
+
+const showNav = (navbar, navbarButton, closeNav) => {
+    if (navbarButton === null) {
+        return false;
+    } else {
+        navbarButton.addEventListener("click", e => {
+            e.preventDefault();
+            navbar.classList.toggle("hidden");
+        });
+
+        closeNav.addEventListener("click", e => {
+            e.preventDefault();
+            navbar.classList.add("hidden");
+        });
+    }
+};
+
+// limpa o localStorage
+
+const cleanLocalStorage = newTest => {
+    newTest.addEventListener("click", e => {
+        e.preventDefault();
+
+        localStorage.clear();
+
+        window.location.href = "/dicas.html";
+    });
+};
+
 // form functions
 
 // Cria o elemento
@@ -378,6 +410,8 @@ const changeTypeUI = (typeAnswers, personType, wing) => {
 };
 
 export {
+    showNav,
+    cleanLocalStorage,
     showAnswer,
     placeQuestions,
     getQuestions,

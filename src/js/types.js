@@ -1,4 +1,4 @@
-import { changeGeneralUI, getData } from "./bundle";
+import { showNav, changeGeneralUI, getData } from "./bundle";
 
 // Pega os elementos
 
@@ -27,6 +27,14 @@ const textSix = document.querySelector("#text-6");
 const textSeven = document.querySelector("#text-7");
 const textEight = document.querySelector("#text-8");
 const textNine = document.querySelector("#text-9");
+
+// Funcionalidade no Menu do Navbar
+
+const navbarButton = document.querySelector("#nav-btn");
+const navbar = document.querySelector("#navbar");
+const closeNav = document.querySelector("#close-nav");
+
+showNav(navbar, navbarButton, closeNav);
 
 // Pega os parâmetros da URL
 

@@ -1,4 +1,5 @@
 import {
+    showNav,
     placeQuestions,
     showAnswer,
     getQuestions,
@@ -7,8 +8,27 @@ import {
     validation
 } from "./bundle";
 
+// Se já houver um resultado, direcionar para a página resultado
+
+const verResultado = () => {
+    if (localStorage.length !== 0) {
+        window.location.href = "/test/resultado.html";
+    }
+};
+
+verResultado();
+
+// Funcionalidade no Menu do Navbar
+
+const navbarButton = document.querySelector("#nav-btn");
+const navbar = document.querySelector("#navbar");
+const closeNav = document.querySelector("#close-nav");
+
+showNav(navbar, navbarButton, closeNav);
+
+// Pega e mostra as alternativas
+
 const questionElement = document.querySelector("#question");
-const buttonNext = document.querySelector("#next");
 
 getQuestions((err, data) => {
     if (err) {
@@ -26,6 +46,10 @@ getQuestions((err, data) => {
         showAnswer(alternatives);
     }
 });
+
+// Botão para ver o resultado
+
+const buttonNext = document.querySelector("#next");
 
 buttonNext.addEventListener("click", e => {
     e.preventDefault();

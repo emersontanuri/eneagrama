@@ -1,4 +1,4 @@
-import { changeGeneralUI, changeTypeUI, getData } from "./bundle";
+import { showNav, changeGeneralUI, changeTypeUI, getData } from "./bundle";
 
 var _ = require("lodash");
 
@@ -33,6 +33,14 @@ const textSix = document.querySelector("#text-6");
 const textSeven = document.querySelector("#text-7");
 const textEight = document.querySelector("#text-8");
 const textNine = document.querySelector("#text-9");
+
+// Funcionalidade no Menu do Navbar
+
+const navbarButton = document.querySelector("#nav-btn");
+const navbar = document.querySelector("#navbar");
+const closeNav = document.querySelector("#close-nav");
+
+showNav(navbar, navbarButton, closeNav);
 
 // Pega os dados do LocalStorage
 

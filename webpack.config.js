@@ -2,8 +2,9 @@ const path = require("path");
 
 module.exports = {
     entry: {
+        index: "./src/js/index.js",
+        dicas: "./src/js/dicas.js",
         form: "./src/js/form.js",
-        interaction: "./src/js/interaction.js",
         result: "./src/js/result.js",
         types: "./src/js/types.js"
     },
