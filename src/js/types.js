@@ -5,7 +5,8 @@ import { changeGeneralUI, getData } from "./bundle";
 const numberOne = document.querySelector("#type-number-1");
 const nameOne = document.querySelector("#type-name-1");
 
-const video = document.querySelector("#video");
+const videoFull = document.querySelector("#video-full");
+const videoSm = document.querySelector("#video-sm");
 
 const numberTwo = document.querySelector("#type-number-2");
 const nameTwo = document.querySelector("#type-name-2");
@@ -57,7 +58,8 @@ getData("js/Typesdata.json")
             typeInfos,
             nameOne,
             numberOne,
-            video,
+            videoFull,
+            videoSm,
             nameTwo,
             numberTwo,
             triade,

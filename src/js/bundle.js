@@ -326,7 +326,8 @@ const changeGeneralUI = (
     typeInfos,
     nameOne,
     numberOne,
-    video,
+    videoFull,
+    videoSm,
     nameTwo,
     numberTwo,
     triade,
@@ -346,7 +347,8 @@ const changeGeneralUI = (
     nameOne.innerText = typeInfos.nome;
     numberOne.innerText = typeInfos.tipo;
 
-    video.setAttribute("src", typeInfos.musica);
+    videoFull.setAttribute("src", typeInfos.musica);
+    videoSm.setAttribute("src", typeInfos.musica);
 
     nameTwo.innerText = typeInfos.nome;
     numberTwo.innerText = typeInfos.tipo;

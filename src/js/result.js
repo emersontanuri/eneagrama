@@ -1,12 +1,16 @@
 import { changeGeneralUI, changeTypeUI, getData } from "./bundle";
 
+var _ = require("lodash");
+
 // Pega os elementos
 
 const numberOne = document.querySelector("#type-number-1");
 const nameOne = document.querySelector("#type-name-1");
 
-const video = document.querySelector("#video");
+const videoFull = document.querySelector("#video-full");
+const videoSm = document.querySelector("#video-sm");
 
+const empateMsg = document.querySelector("#empate");
 const table = document.querySelector("#types-table");
 
 const numberTwo = document.querySelector("#type-number-2");
@@ -38,6 +42,12 @@ const typeAnswers = JSON.parse(localStorage.getItem("typeAnswers"));
 
 const personType = Math.max(...typeAnswers);
 
+// Checa se houve empate no resultado
+
+if (typeAnswers.length - 1 !== _.difference(typeAnswers, [personType]).length) {
+    empateMsg.classList.remove("hidden");
+}
+
 // Pega os dados do JSON
 
 let typeInfos = 0;
@@ -52,7 +62,8 @@ getData("/js/Typesdata.json")
             typeInfos,
             nameOne,
             numberOne,
-            video,
+            videoFull,
+            videoSm,
             nameTwo,
             numberTwo,
             triade,

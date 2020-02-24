@@ -69,9 +69,19 @@
             <h3 id="type-name-1" class="text-1xl font-medium text-blue-700 text-center"></h3 id="type-name-2">
             <div class="py-5">
                 <h3 class="text-1xl font-medium text-blue-700 text-center">Essa é a sua música, dê play enquanto lê ;)</h3>
-                <iframe id="video" width="420" height="300" src="" class="my-3 mx-auto rounded-lg shadow-lg print:hidden" allowfullscreen></iframe>
+                <div class="hidden sm:block print:hidden">
+                    <iframe id="video-full" width="520" height="400" src="" class="my-3 mx-auto rounded-lg shadow-lg" allowfullscreen></iframe>
+                </div>
+                <div class="sm:hidden print:hidden">
+                    <iframe id="video-sm" width="290" height="200" src="" class="my-3 mx-auto rounded-lg shadow-lg" allowfullscreen></iframe>
+                </div>
             </div>
 
+            <div id="empate" class="flex flex-col my-1 hidden print:hidden">
+                <small class="font-medium text-blue-700 text-sm mx-auto">Houve um empate em seu resultado.</small>
+                <small class="font-regular text-blue-700 italic text-xs md:hidden mx-auto">Veja no <strong>modo Desktop</strong> para ver a tabela de resultados</small>
+                <small class="font-light text-xs mx-auto text-justify">Você pode optar por fazer o teste novamente (recomendado) ou analisar com qual perfil você mais se identifica.</small>
+            </div>
             <div class="table-fixed mx-10 rounded shadow-lg hidden md:block">
                 <div>
                     <div class="bg-blue-700 rounded-t flex justify-between">
@@ -119,7 +129,7 @@
                     <p class="text-sm font-regular inline"><strong class="text-sm font-bold">Asa: </strong> Tipo </p> <p id="asa" class="text-sm mx-1 font-regular inline"></p>
                 </div>
 
-                <div class="flex my-3">
+                <div class="flex items-start my-3">
                     <div class="bg-white shadow-lg rounded mx-3">
                         <div class="bg-blue-700 px-5 py-1 rounded-t">
                             <p class="text-white font-bold text-xs text-center">Tríade</p>
