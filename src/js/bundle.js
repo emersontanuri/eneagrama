@@ -18,18 +18,6 @@ const showNav = (navbar, navbarButton, closeNav) => {
     }
 };
 
-// limpa o localStorage
-
-const cleanLocalStorage = newTest => {
-    newTest.addEventListener("click", e => {
-        e.preventDefault();
-
-        localStorage.clear();
-
-        window.location.href = "/dicas.html";
-    });
-};
-
 // form functions
 
 // Cria o elemento
@@ -411,7 +399,6 @@ const changeTypeUI = (typeAnswers, personType, wing) => {
 
 export {
     showNav,
-    cleanLocalStorage,
     showAnswer,
     placeQuestions,
     getQuestions,
