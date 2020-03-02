@@ -364,6 +364,7 @@ const changeGeneralUI = (
     textEight,
     textNine
 ) => {
+    console.log(typeInfos);
     nameOne.innerText = typeInfos.nome;
     numberOne.innerText = typeInfos.tipo;
 

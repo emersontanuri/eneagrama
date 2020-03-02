@@ -64,7 +64,12 @@
             <h3 id="type-name-1" class="text-1xl font-medium text-blue-700 text-center"></h3 id="type-name-2">
             <div class="py-5">
                 <h3 class="text-1xl font-medium text-blue-700 text-center">Essa é a sua música deste tipo</h3>
-                <iframe id="video" width="420" height="300" src="" class="my-3 mx-auto rounded-lg shadow-lg print:hidden" allowfullscreen></iframe>
+                <div class="hidden sm:block print:hidden">
+                    <iframe id="video-full" width="520" height="400" src="" class="my-3 mx-auto rounded-lg shadow-lg" allowfullscreen></iframe>
+                </div>
+                <div class="sm:hidden print:hidden">
+                    <iframe id="video-sm" width="290" height="200" src="" class="my-3 mx-auto rounded-lg shadow-lg" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </main>
